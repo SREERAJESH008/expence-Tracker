@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <!-- normalized css -->
+    <link rel="stylesheet" href="./style/normalized.css" />
+    <!-- fontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Customized css -->
+    <link rel="stylesheet" href="./style/customized.css" />
+  </head>
+
+  <body>
+    <div class="alert" id="alert">
+      <!-- content to be added from js -->
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fa-solid fa-money-bill-transfer"></i> Expense Tracker</h2>
+          <p>Track your daily expense and transaction using us.</p>
+        </div>
+        <div id="balance" class="balance">
+          <!-- balance and expense gonna display here -->
+        </div>
+        <b>Your Expenses and Transactions are:</b>
+        <div class="remain"><h3>History</h3>
+        <hr class="line"></div>
+        <div class="list-container" id="list-container">
+          <!-- all list gonna display here -->
+        </div>
+        <div class="form">
+          <div class="form-control">
+            <label for="transaction"> Add New Transaction:</label>
+            <div class="remain"><hr></div>
+            <input
+              type="text"
+              name="transaction"
+              class="input"
+              id="transaction"
+              placeholder="Enter your Transaction"
+            />
+          </div>
+          <div class="form-control">
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" class="input" id="amount" placeholder="Enter your Amount"/>
+          </div>
+          <select name="tracker" id="transaction-tracker" class="input" aria-placeholder="Select your action" style="height: 40px;">
+            <option selected disabled>Select your action</option>
+            
+            <option value="transaction">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+          <button id="submit" type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
